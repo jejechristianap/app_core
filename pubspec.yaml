@@ -1,0 +1,53 @@
+name: app_core
+description: "App Core Project"
+publish_to: "none"
+version: 0.0.1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  firebase_collection:
+    git:
+      url: https://github.com/jejechristianap/firebase_collection.git
+      ref: main
+
+  common:
+    git:
+      url: https://github.com/jejechristianap/common.git
+      ref: master
+
+  dependency_injection:
+    git:
+      url: https://github.com/jejechristianap/dependency_injection.git
+      ref: master
+
+  deeplink:
+    git:
+      url: https://github.com/jejechristianap/deeplink.git
+      ref: main
+
+  networking:
+    git:
+      url: https://github.com/jejechristianap/networking.git
+      ref: master
+
+  storage:
+    git:
+      url: https://github.com/jejechristianap/storage.git
+      ref: master
+  cupertino_icons: ^1.0.2
+  flutter_local_notifications: 16.3.2
+  pretty_json: 2.0.0
+  uni_links: 0.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 3.0.1
+
+flutter:
+  uses-material-design: true

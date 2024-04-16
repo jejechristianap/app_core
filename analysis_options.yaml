@@ -1,0 +1,51 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    strict-inference: true
+    strict-raw-types: true
+  plugins:
+    - dart_code_metrics
+  errors:
+    dead_code: error
+  exclude:
+    - build/**
+    - example/**
+
+dart_code_metrics:
+  rules:
+    # https://dartcodemetrics.dev/docs/rules/common/member-ordering-extended
+    - member-ordering-extended:
+        order:
+          - public-late-final-fields
+          - private-late-final-fields
+          - public-nullable-fields
+          - private-nullable-fields
+          - named-constructors
+          - factory-constructors
+          - public-getters
+          - private-getters
+          - public-setters
+          - private-setters
+          - public-static-methods
+          - private-static-methods
+          - public-methods
+          - private-methods
+          - protected-methods
+
+linter:
+  rules:
+    avoid_dynamic_calls: false
+    prefer_single_quotes: true
+    prefer_const_constructors: true
+    require_trailing_commas: true
+    always_declare_return_types: true
